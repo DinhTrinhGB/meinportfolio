@@ -1,0 +1,115 @@
+---
+title: "MDX Liste"
+publishedAt: "2025-04-04"
+summary: "MDX cheatsheet"
+tags: "MDX"
+---
+
+
+
+## Textstyle
+
+**dick**
+
+_dünn_
+
+<del> durchgestrichen </del>
+
+## Blocktext
+
+> Dieser Text ist ist in einem Block
+
+## Links
+
+- [Next.js](https://nextjs.org).
+
+## Code Block
+
+```
+// This is commented-out code
+export default function HelloWorld() {
+  return (
+    <h1>Hello, World!</h1>
+  );
+}
+```
+
+## Bild
+
+
+
+
+<Image
+  src="/profile.png"
+  alt="Profilbild"
+  width={500}
+  height={500}
+/>
+
+## Bilder Gallery
+
+
+<ImageGrid
+  columns={3}
+  images={[
+    { src: "/photos/photo1.jpg", alt: "Photo1", href: "#" },
+    { src: "/photos/photo2.jpg", alt: "Photo2", href: "#" },
+    { src: "/photos/photo3.jpg", alt: "Photo3" },
+  ]}
+/>
+
+## Embeds
+
+### Tweets
+
+
+<StaticTweet id="1617979122625712128" />
+
+### YouTube Videos
+
+
+
+<YouTube videoId="hxcE31nWzQ0" />
+
+### Captions
+
+
+<Caption>
+  Captions 
+</Caption>
+
+## Tabelle
+
+
+<Table
+  data={{
+    headers: ["Name", "Attribut","Attribut2"],
+    rows: [
+      [
+        "1",
+        "1.1","1.2",
+      ],
+      [
+        "2",
+        "2.1","2.2",
+      ],
+    ],
+  }}
+/>
+
+## Mathe
+
+
+$
+\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+$
+
+## Callout
+
+
+
+Renders:
+
+<Callout emoji="💡">
+  Callout 
+</Callout>
