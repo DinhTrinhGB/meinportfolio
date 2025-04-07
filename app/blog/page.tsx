@@ -43,7 +43,3 @@ export default function BlogPosts() {
     </section>
   );
 }
-      </div>
-    </section>
-  );
-}
