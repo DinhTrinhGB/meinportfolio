@@ -7,15 +7,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Mithril AI",
-    year: 2024,
-    description: "Open science AI resarch lab",
-    url: "https://github.com/mithrilai",
+    title: "Link1",
+    year: 2025,
+    description: "der erste Link",
+    url: "https://github.com",
   },
   {
-    title: "OpenDeepLearning",
-    year: 2023,
-    description: "Open source AI education resources",
-    url: "https://opendeeplearning.xyz/",
+    title: "Link2",
+    year: 2025,
+    description: "der zweite Link",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
+  {
+    title: "Link4",
+    year: 2025,
+    description: "der vierte Link",
+    url: "https://nextjs.org/docs/app/api-reference/components/link",
+  }
 ];
