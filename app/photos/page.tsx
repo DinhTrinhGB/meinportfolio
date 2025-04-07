@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ImageGrid } from "app/components/image-grid";
 
 export const metadata: Metadata = {
-  title: "photos",
+  title: "Photos",
   description: "My Photos",
 };
 
