@@ -1,13 +1,6 @@
 import Image from "next/image";
 import { socialLinks } from "./config";
-import { useState } from 'react';
 
-export default function Home() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount(count + 1);
-  };
 
 export default function Page() {
   return (
@@ -46,7 +39,7 @@ export default function Page() {
             nicht auf diesen Link drücken
           </a>
         </p>
-         <button onClick={handleClick}> {count} </button>
+       
         <p>
           Ich weiß nicht was ich hier schreiben soll.
         </p>
