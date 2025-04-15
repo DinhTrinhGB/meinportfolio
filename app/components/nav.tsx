@@ -7,6 +7,7 @@ const navItems = {
   "/projects": { name: "Links" },
   "/photos": { name: "Fotos" },
   "/fehler": { name: "404"},
+  "/postboard": { name: "Postboard" },
 };
 
 export function Navbar() {
