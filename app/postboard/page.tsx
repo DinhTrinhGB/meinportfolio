@@ -3,12 +3,12 @@ import { useState } from 'react';
 
 export default function PostBoard() {
   const [message, setMessage] = useState('');
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<string[]>([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (message.trim()) {
-      setPosts([...posts, message]);
+      setPosts(prevPosts => [...prevPosts, message]);
       setMessage('');
     }
   };
