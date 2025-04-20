@@ -15,7 +15,7 @@ export default function PostBoard() {
     };
     fetchPosts();
   }, []);
-
+  // 
   // Store new post in Firestore
   const handleSubmit = async (e) => {
     e.preventDefault();
