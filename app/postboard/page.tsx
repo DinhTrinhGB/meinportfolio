@@ -1,28 +1,15 @@
 'use client';
-import { useState, useEffect } from 'react';
-import { db } from '../lib/firebaseConfig';
-import { collection, addDoc, getDocs } from 'firebase/firestore';
+import { useState } from 'react';
 
 export default function PostBoard() {
   const [message, setMessage] = useState('');
   const [posts, setPosts] = useState<string[]>([]);
 
-  // Fetch posts from Firestore
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const querySnapshot = await getDocs(collection(db, 'posts'));
-      setPosts(querySnapshot.docs.map(doc => doc.data().message));
-    };
-    fetchPosts();
-  }, []);
-  // 
-  // Store new post in Firestore
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (message.trim()) {
-      await addDoc(collection(db, 'posts'), { message });
+      setPosts(prevPosts => [...prevPosts, message]);
       setMessage('');
-      setPosts(posts => [...posts, message]); // Update local state
     }
   };
 
@@ -46,4 +33,3 @@ export default function PostBoard() {
     </div>
   );
 }
-
