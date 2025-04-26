@@ -3,8 +3,8 @@ import clientPromise from '../../lib/mongodb';
 export default async function handler(req, res) {
   try {
     const client = await clientPromise; // Establish connection
-    const db = client.db('Project 0'); // Connect to 'postboard' database
-    const collection = db.collection('Portfolio'); // Access 'posts' collection
+    const db = client.db('Portflio'); // Connect to 'postboard' database
+    const collection = db.collection('Postboard'); // Access 'posts' collection
 
     if (req.method === 'POST') {
       const { message } = req.body; // Extract the message
